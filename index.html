@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet">
+    <title>Sten Sax Påse</title>
+</head>
+<body>
+    <div class="container">
+        <div class="game-box">
+            <div class="game-title">
+                <p>STEN SAX PÅSE</p>
+            </div>
+
+            <div class="players-input">
+                <input id="player-name" type="text" placeholder="ANGE SPELARENS NAMN" required>
+            </div>
+
+            <div class="game-buttons">
+                <button id="rock_btn" class="rock-btn" onclick="RockPaperScissor('sten')">
+                    <img src="icons/rock.png" class="rock">
+                </button>
+                    
+                <button id="scissor_btn" class="scissor-btn" onclick="RockPaperScissor('sax')">
+                    <img src="icons/scissor.png" class="scissor">
+                </button>
+                   
+                <button id="paper_btn" class="paper-btn" onclick="RockPaperScissor('påse')">
+                    <img src="icons/paper.png" class="paper">
+                </button>
+            </div>
+
+            <div class="game-moves">
+                <div class="player-move">
+                    <p class="player-name">SPELAREN:</p>
+                    <p id="player-choice">--------</p>
+                </div>
+
+                <div class="computer-move">
+                    <p class="computer-name">DATORN:</p>
+                    <p id="computer-choice">--------</p>
+                </div>
+
+                <div class="winner-move">
+                    <p id="winner">?</p>
+                </div>
+
+            </div>
+
+            <div class="game-result">
+                <div class="wins">
+                    <img src="icons/win.png">
+                    <p id="total-wins">0</p>
+                </div>
+
+                <div class="lose">
+                    <img src="icons/lose.png">
+                    <p id="total-losses">0</p>
+                </div>
+                
+                <div class="tie">
+                    <img src="icons/tie.png">
+                    <p id="total-ties">0</p>
+                </div>
+            </div>
+
+            <div class="reset">
+                <button onclick="resetGame()">
+                    <img src="icons/reset.png">
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
